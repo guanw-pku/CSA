@@ -29,6 +29,10 @@ The directories of CSA should look like:
 cd ~/CSA/refine
 python scripts/evaluate.py # evaluate the performance of object detection
 ```
+|AP@1|AP@10|AR@1|AR@10|weight|
+|:----:|:----:|:----:|:----:|:----:|
+| 13.8 | 14.2 | 35.2 | 40.6 |[link](https://drive.google.com/file/d/1KIBicIMgJ2GvJ4L-T_2n5wnSnxTTe792/view?usp=sharing)|
+
 + For preprocess (optional)
 
 You can obtain the detection results with trained model.
@@ -38,12 +42,17 @@ These three splits should all be processed.
 cd ~/CSA/refine
 python scripts/preprocess.py
 ```
+
 + For PLA model
 ```
 cd ~/CSA/PLA
 python test.py --cfg configs/oneframe.yml # for image SGG model
 python test.py --cfg configs/final.yml # for video SGG model
 ```
+| Model |W/R@10|W/R@20|W/R@50|N/R@10|N/R@20|N/R@50|weight|
+|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|
+| Image | 16.52 | 21.42 | 26.68 | 17.57 | 23.35 | 32.27 |[link](https://drive.google.com/file/d/19asLLW8NLgjuZUuXPsnFBmiSN1mXLLV7/view?usp=sharing)|
+| Video | 16.83 | 21.72 | 26.96 | 17.95 | 23.98 | 32.98 |[link](https://drive.google.com/file/d/1DRm2W3cshzfQfoKdhUnD9JEn5wnpTFzC/view?usp=sharing)|
 
 ## Train
 + For refine model
